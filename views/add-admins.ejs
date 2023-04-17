@@ -1,0 +1,76 @@
+<%- include("partials/mainHeader") -%>
+    <div class="mainLoginSignupContainer">
+        <div class="leftLoginSignUpContainer">
+
+        </div>
+
+        <div class="rightLoginSignUpContainer">
+            <div class="rightLoginSignUpContentContainer">
+
+                <div class="headerSignUp">
+                    <h1>Add Admins</h1>
+                    <p>**Every field must be filled</p>
+                </div>
+                <div class="formSignUp">
+                    <form action="/admins-add" method="POST">
+                        <div class="signup-inputs">
+                            <label for="adminfullname">Enter Full Name</label>
+                            <input type="text" name="adminfullname" id="adminfullname" required>
+                        </div>
+
+                        <div class="signup-inputs">
+                            <label for="adminemail">Enter Email</label>
+                            <input type="text" name="adminemail" id="adminemail" required>
+                        </div>
+
+                        <div class="signup-inputs">
+                            <label for="adminuniqueid">Enter Admin's unique Authorization ID</label>
+                            <input type="password" name="adminuniqueid" id="adminuniqueid" required>
+                        </div>
+
+                        <div class="signup-inputs">
+                            <label for="adminstate">Enter Admin's State</label>
+                            <select name="adminstate" id="adminstate" required>
+                                <option value="Jharkhand">Jharkhand</option>
+                            </select>
+                        </div>
+
+                        <div class="signup-inputs">
+                            <label for="admindistrict">Enter Admin's District</label>
+                            <select name="admindistrict" id="admindistrict" required>
+                                <option value="Ranchi">Ranchi</option>
+                                <option value="Bokaro">Bokaro</option>
+                                <option value="Koderma">Koderma</option>
+                                <option value="Dhanbad">Dhanbad</option>
+                            </select>
+                        </div>
+
+                        <div class="signup-inputs">
+                            <label for="admincontact">Admin's Contact Number</label>
+                            <input type="number" name="admincontact" id="admincontact" required>
+                        </div>
+
+                        <div class="signup-inputs">
+                            <label for="adminpassword">Admin's Password</label>
+                            <input type="password" name="adminpassword" id="adminpassword" required>
+                        </div>
+
+
+                        <div class="signup-buttons">
+                            <button type="submit">Sign Up</button>
+                            <button type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footerSignUp">
+                    <p class="newUserMessage"><%= addNewAgain %></p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <%- include("partials/mainFooter") -%>

@@ -1,0 +1,51 @@
+<%- include("partials/mainHeader") -%>
+    <div class="mainLoginSignupContainer">
+        <div class="leftLoginSignUpContainer">
+
+        </div>
+
+        <div class="rightLoginSignUpContainer">
+            <div class="rightLoginSignUpContentContainer">
+
+                <div class="headerSignUp">
+                    <h1>Sign Up here</h1>
+                    <p>(*) is the mandatory fields</p>
+                    <p class="newUserMessage"><%= newUserMessage %> </p>
+                </div>
+                <div class="formSignUp">
+                    <form action="/signupUser" method="POST">
+                        <div class="signup-inputs">
+                            <label for="userfullname">Enter you full name(*)</label>
+                            <input type="text" id="userfullname" name="userfullname" autocomplete="off" required>
+                        </div>
+
+                        <div class="signup-inputs">
+                            <label for="useremail">Enter you email(*)</label>
+                            <input type="email" id="useremail" name="useremail" autocomplete="off" required>
+                        </div>
+
+                        <div class="signup-inputs">
+                            <label for="userpassword">Enter you password(*)</label>
+                            <input type="password" id="userpassword" name="userpassword" autocomplete="off" required>
+                        </div>
+
+                        <div class="signup-inputs">
+                            <label for="userpetname">Enter your favourite pet name</label>
+                            <input type="text" id="userpetname" name="userpetname" autocomplete="off">
+                        </div>
+
+                        <div class="signup-buttons">
+                            <button type="submit">Sign Up</button>
+                            <button type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footerSignUp">
+                    <p>Already a user, for log in <a href="/userLogin">Click here</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <%- include("partials/mainFooter") -%>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Css -->
+    <link rel="stylesheet" href="contact_us.css">
+</head>
+
+
+<style>
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #98D8AA;
+}
+.container{
+    text-align: center;
+    background-color: #98D8AA;
+}
+
+.header{
+    padding-top: 30px ;
+    color: #444;
+    font-size: 20px;
+    margin: auto;
+    line-height: 50px;
+}
+
+.sub-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.teams{
+    margin: 30px;
+    padding: 22px;
+    max-width: 30%;
+    cursor: pointer;
+    transition: 0.4s;
+    box-sizing: border-box;
+}
+
+.teams:hover{
+    background: #ddd;
+    border-radius: 12px;
+}
+
+.teams img{
+    width: 200px;
+    height: 200px;
+}
+
+.names{
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.about{
+    margin: 20px 0px;
+    font-weight: lighter;
+    color: #4e4e4e;
+}
+
+
+.social{
+    margin: 16px;
+}
+
+.social a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transition: 0.4s;
+}
+
+.social a:hover{
+    transform: scale(1.5);
+}
+
+.social a i{
+    color: #444;
+
+}
+
+@media screen and (max-width : 600px){
+    .teams{
+        max-width: 100%;
+    }
+    .sub-container{
+        max-width: 1200px;
+        margin: auto;
+        padding: 30px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .top{
+        width: 100%;
+    }
+}
+
+
+
+
+
+.content{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.content:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("bg.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+	background: url("bg.png") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #98D8AA;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #2ecc71;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #27ae60;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+</style>
+
+    <nav class="navbar navbar-expand-xl navbar navbar-dark " style="background-color: #6096B4">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">HER VOICE MATTERS</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/resources" class="nav-link ">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/stories" class="nav-link">Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/aboutus" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contactus" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login/signup</a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="/adminLogin" class="dropdown-item">Administration Login</a>
+                            <a href="/userLogin" class="dropdown-item">User Login</a>
+                            <a href="/signupUser" class="dropdown-item">User Signup</a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Our Team</h1>
+        </div>
+        <div class="sub-container">
+            <div class="teams">
+                <div class="names">Varad Gupta</div>
+                <div class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, debitis!</div>
+                <div class="social">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="teams">
+                <div class="names">Alok Gupta</div>
+                <div class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, debitis!</div>
+                <div class="social">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="teams">
+                <div class="names">Siva Sai Dorababu</div>
+                <div class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, debitis!</div>
+                <div class="social">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="teams">
+                <div class="names">Md Khateebur Rab</div>
+                <div class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, debitis!</div>
+                <div class="social">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form action="mailto: varadgupta21@gmail.com" enctype="text/plain" method="POST" />
+        <div class="content">
+            <div class="contact-box">
+                <div class="left"></div>
+                <div class="right">
+                    <h2>Contact Us</h2>
+                    <input required type="text" class="field" placeholder="Your Name" name="Your Name">
+                    <input required type="email" class="field" placeholder="Your Email" name="Your Email">
+                    <input required type="number" class="field" placeholder="Phone" name="Phone Number">
+                    <textarea placeholder="Message" class="field" name="Messsage"></textarea>
+                    <button class="btn">Send</button>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>

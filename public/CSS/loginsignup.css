@@ -1,0 +1,81 @@
+body{
+    background-color:rgb(242, 222, 197);
+}
+
+
+.mainLoginSignupContainer{
+    display: flex;
+    min-height: 85vh;
+}
+
+
+.leftLoginSignUpContainer{
+width: 50%;
+
+}
+
+.rightLoginSignUpContainer{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.rightLoginSignUpContentContainer{
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.formSignUp div, .formLogin div{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-inputs input, .signup-inputs select{
+    width: 25vw;
+    height: 30px;
+    padding: 3px 4px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+
+.signup-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.signup-buttons button{
+    height: 30px;
+    padding: 3px 6px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 5px;
+    background-color: rgb(20, 20, 238);
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.passErrMessage{
+    color: red;
+}
+.newUserMessage{
+    color: blue;
+}
+
+
+footer{
+    display: flex;
+    background-color: #7dc1f8;
+    width: 100vw;
+}

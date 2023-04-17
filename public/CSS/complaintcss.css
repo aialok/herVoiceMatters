@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+}
+
+.adminpageMainDiv{
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+}
+
+.adminDataContainer{
+    width: 43vw;
+    background-color: rgb(255, 242, 226);
+    padding: 15px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+#mainComplaintCard{
+    width: 43vw;
+    background-color: rgb(255, 242, 226);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainComplaintCard h1{
+    font-size: 20px;
+}
+
+.complaintsCard{
+    width: 95%;
+    padding: 15px;
+    margin: 8px;
+    border-radius: 5px;
+    background-color: rgb(247, 229, 204);
+}
+
+.complaintCards{
+    padding: 10px;
+    margin: 7px 0px;
+    background-color: beige;
+}
+
+.dataBold{
+    font-weight: bold;
+}
+
+#rightCardAdmin p{
+    padding: 3px;
+    margin: 3px 0px;
+    background-color: bisque;
+}

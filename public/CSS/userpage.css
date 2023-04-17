@@ -1,0 +1,27 @@
+.userMainDiv{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 85vh;
+    padding: 30px;
+}
+
+.userDataDiv{
+    width: 40vw;
+    padding: 20px;
+    background-color: rgb(250, 237, 220);
+    border-radius: 5px;
+}
+
+.complaint-status-details{
+    width: 50vw;
+    padding: 20px;
+    background-color: rgb(250, 237, 220);
+    border-radius: 5px;
+}
+
+.complaint-status, .complaint-details{
+    padding: 10px;
+    margin: 5px 0px;
+    background-color: rgb(249, 229, 202);
+}

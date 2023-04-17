@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!-- Contribute to dorababu -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Rajdhani&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .comp-header {
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            /* height: 150px; */
+            width: 100%;
+            background-color: #e6d8cf;
+        }
+
+        .comp-header img {
+            height: 167px;
+            margin-right: 90px;
+            margin-top: -19px;
+        }
+
+        .comp-header h1 {
+            margin-left: 40px;
+            margin-top: 50px;
+        }
+
+        .comp-down-div {
+            width: 100%;
+            display: flex;
+        }
+
+        .comp-down-div1 {
+            width: 50%;
+            background-color: #ebeae8;
+        }
+
+        .comp-down-div1 h2 {
+            margin: 0px 160px;
+            margin-top: 10px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .comp-down-div1 div {
+            width: 430px;
+            margin: 20px auto;
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .comp-down-div2 {
+            background-color: #ebeae8;
+            display: flex;
+            align-items: center;
+            width: 50%;
+        }
+
+        .comp-down-div1 div input,
+        select {
+            width: 230px;
+            height: 33px;
+            font-weight: bolder;
+            width: 350px;
+            border-radius: 6px;
+            border-width: 0px;
+            padding: 5px;
+            outline: none;
+        }
+
+        .buttons {
+            width: 70px;
+            height: 30px;
+            margin: 0 7px;
+            background-color: rgb(198, 216, 216);
+            border-width: 0;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .comp-footer {
+            background-color: hsl(0, 0%, 78%);
+            height: 150px;
+            width: 100%;
+            text-align: center;
+            padding-top: 4rem;
+            line-height: 29px;
+        }
+
+        .comp-footer h1 {
+            color: white;
+        }
+
+        label,
+        select {
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="CSS/complaint.css">
+
+    <nav class="navbar navbar-expand-xl navbar navbar-dark " style="background-color: #6096B4">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">HER VOICE MATTERS</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/resources" class="nav-link ">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/stories" class="nav-link">Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/aboutus" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contactus" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login/signup</a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="/adminLogin" class="dropdown-item">Administration Login</a>
+                            <a href="/userLogin" class="dropdown-item">User Login</a>
+                            <a href="/signupUser" class="dropdown-item">User Signup</a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</head>
+<body>
+    <div class="comp-header">
+        <h1>Register Your Complaint</h1>
+        <img src="https://o.remove.bg/downloads/68d48ce4-6f11-4189-b3f3-bd8ac1cd5d29/femenism-girl-power-concept-idea-gender-equality-female-movement-women-group-hugging-together-female-character-support-each-other-card-banner_277904-5564-removebg-preview.png"
+            alt="Error Image">
+    </div>
+    <div class="comp-down-div">
+        <div class="comp-down-div1">
+            <h2>For State Government Employee</h2>
+            <form action="/sgovcomplaint" method="post">
+                <div>
+                    <label for="sgovname">Name of the Complainant</label>
+                    <input type="text" placeholder="Enter Name of the Complaint" id="sgovname" name="sgovname">
+                </div>
+
+                <div>
+                    <label for="sgovdesignation">Designation</label>
+                    <input type="text" placeholder="Designation" id="sgovdesignation" name="sgovdesignation">
+                </div>
+
+                <div>
+                    <label for="sgovcontact">Mobile Number</label>
+                    <input type="number" placeholder="Mobile Number" id="sgovcontact" name="sgovcontact">
+                </div>
+
+                <div>
+                    <label for="sgovemail">Email</label>
+                    <input type="email" placeholder="Email" id="sgovemail" name="sgovemail">
+                </div>
+
+
+                <div>
+                    <label for="sgovaadhar">Aadhaar Number</label>
+                    <input type="number" placeholder="Aadhaar Number" id="sgovaadhar" name="sgovaadhar">
+                </div>
+
+                <div>
+                    <label for="sgovstate">State:</label>
+                    <select name="sgovstate" id="sgovstate">
+                        <option value="Jharkhand">Jharkhand</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sgovdistrict">Distric:</label>
+                    <select name="sgovdistrict" id="sgovdistrict">
+                        <option value="Ranchi">Ranchi</option>
+                        <option value="Bokaro">Bokaro</option>
+                        <option value="Koderma">Koderma</option>
+                        <option value="Dhanbad">Dhanbad</option>
+                    </select>
+                </div>
+
+
+                <!-- <div>
+                <label for="cgovorganisation">Ministry/Organisation</label>
+                <select name="cgovorganisation" id="cgovorganisation" placeholder="select">
+                    <option value="select" selected>none</option>
+                    <option value="Ministry of tourism">Ministry of tourism</option>
+                    <option value="Ministry of rural development">Ministry of rural development</option>
+                    <option value="Ministry of corporate affairs">Ministry of corporate affairs</option>
+                    <option value="Ministry of Science and Technology">Ministry of Science and Technology</option>
+                </select>
+            </div> -->
+
+                <div>
+                    <label for="sgovaccused">Name(s) of the Accused</label>
+                    <input type="text" placeholder="Name of the Accused" id="sgovaccused" name="sgovaccused">
+                </div>
+
+                <div>
+                    <label for="sgovdep">Department of the Accused</label>
+                    <input type="text" placeholder="Department of the Accused" id="sgovdep" name="sgovdep">
+                </div>
+
+                <div>
+                    <label for="sgovrel">Working Relationship with Accused</label>
+                    <input type="text" placeholder="Working Relationship with Accused" id="sgovrel" name="sgovrel">
+                </div>
+
+
+                <div>
+                    <p>Have you registered your complaint with ICC</p>
+                    <span style="display: flex; align-items: center; justify-content: left;">
+                        <span style="display: flex; align-items: center; margin: 0px 20px;">
+                            <label for="sgovicc">Yes</label>
+                            <input type="radio" style="width: 13px; margin: 0px 5px;" name="sgovicc" id="sgovicc"
+                                value="Yes">
+                        </span>
+                        <span style="display: flex; align-items: center; ">
+                            <label for="sgovicc">No</label>
+                            <input type="radio" style="width: 13px; margin: 0px 5px;" name="sgovicc" id="sgovicc"
+                                value="No">
+                        </span>
+                    </span>
+                </div>
+
+                <div>
+                    <label for="sgovbrief">Brief Description</label>
+                    <textarea
+                        style="border-radius: 5px; border: none; outline: none; padding: 5px; width: 350px; cursor: pointer;"
+                        id="sgovbrief" name="sgovbrief" rows="10" cols="20"></textarea>
+                </div>
+
+
+                <!-- <div>
+                captcha wala part
+                <label for="cgovtextarea">Enter text here</label> 
+                <input type="text" style="margin: 15px 0px;">
+                <input type="text">
+            </div> -->
+
+                <div style="padding-left: 90px; flex-direction: row">
+                    <button class="buttons">Submit</button>
+                    <button class="buttons">Reset</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="comp-down-div2">
+            <img src="https://img.freepik.com/premium-photo/happy-women-s-day-card-women-different-ethnicities-flowers-leaves-8-march-theme_852336-98.jpg?w=740"
+                alt="">
+        </div>
+    </div>
+
+    <div class="comp-footer">
+        <h1>Disclaimer | Terms and Conditions</h1>
+        <p style="color: white;">Copyright 2017, Ministry of Women and Child Development,Government of India</p>
+    </div>
+
+</body>
+
+</html>

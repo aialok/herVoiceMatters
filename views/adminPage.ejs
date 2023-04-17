@@ -1,0 +1,349 @@
+<%- include("partials/mainHeader") -%>
+    <div class="adminpageMainDiv">
+        <div class="adminDataContainer">
+            <h2>Here are your details</h2>
+            <div id="rightCardAdmin">
+                <p><b>Name :</b> <%= adminName %>
+                </p>
+                <p><b>Email :</b> <%= adminEmail %>
+                </p>
+                <p><b>Unique ID :</b> <%= adminUniqueID %>
+                </p>
+                <p><b>State of work : </b><%= adminState %>
+                </p>
+                <p><b>Authorised district : </b><%= adminDistrict %>
+                </p>
+            </div>
+        </div>
+
+        <div id="mainComplaintCard">
+            <div class="cgovComplaints complaintsCard">
+                <h1>Central Government Employees complaint of your district</h1>
+                <% districtCGOVComplaints.forEach((districtCGOVComplaint)=>{ %>
+                    <div class="complaintCards">
+                        <div>
+                            <span>Name of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovname %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Email of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovemail %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Contact no of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovcontact %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>State of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovstate %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>District of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovdistrict %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Designation of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovdesignation %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Aadhar No of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovaadhar %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Organization/Ministry to which victim work: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovorganisation %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Name of accused: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovaccused %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Department of accused: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovdep %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Relation with accused: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovrel %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Victim complaint to ICC: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovicc %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Brief about the matter: </span>
+                            <span class="dataBold">
+                                <%= districtCGOVComplaint.cgovbrief %>
+                            </span>
+                        </div>
+                        <div>
+                            <form action="/usercomplaint/status" method="POST">
+                                <label for="selectstatus" style="font-weight: bold;">What is the application status:</label>l
+                                <select name="selectstatus" id="selectstatus">
+                                    <option value="Complaint Lodged">Complaint Lodged</option>
+                                    <option value="Application accepted">Application accepted</option>
+                                    <option value="Application in process">Application in process</option>
+                                    <option value="Issue Solved">Issue solved</option>
+                                    <option value="Issue will not solved">Fake Issue</option>
+                                </select>
+                                <input type="hidden" name="complaintId" value="<%= districtCGOVComplaint._id %>">
+                                <input type="hidden" name="employee" value="cgov">
+                                <input type="hidden" name="employeeEmail" value="<%= districtCGOVComplaint.cgovemail %>">
+                                <button type="submit">Click Status</button>
+                            </form>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+
+
+            <div class="sgovComplaints complaintsCard">
+                <h1>State Government Employees complaint of your district</h1>
+                <% districtSGOVComplaints.forEach((districtSGOVComplaint)=>{ %>
+                    <div class="complaintCards">
+                        <div>
+                            <span>Name of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovname %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Email of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovemail %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Contact no of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovcontact %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>State of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovstate %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>District of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovdistrict %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Designation of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovdesignation %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Aadhar No of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovaadhar %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Name of accused: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovaccused %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Department of accused: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovdep %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Relation with accused: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovrel %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Victim complaint to ICC: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovicc %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Brief about the matter: </span>
+                            <span class="dataBold">
+                                <%= districtSGOVComplaint.sgovbrief %>
+                            </span>
+                        </div>
+                        <div>
+                            <form action="/usercomplaint/status" method="POST">
+                                <label for="selectstatus" style="font-weight: bold;">What is the application status:</label>
+                                <select name="selectstatus" id="selectstatus">
+                                    <option value="Complaint Lodged">Complaint Lodged</option>
+                                    <option value="Application accepted">Application accepted</option>
+                                    <option value="Application in process">Application in process</option>
+                                    <option value="Issue Solved">Issue solved</option>
+                                    <option value="Issue will not solved">Fake Issue</option>
+                                </select>
+                                <input type="hidden" name="complaintId" value="<%= districtSGOVComplaint._id %>">
+                                <input type="hidden" name="employee" value="sgov">
+                                <input type="hidden" name="employeeEmail" value="<%= districtSGOVComplaint.sgovemail %>">
+                                <button type="submit">Click Status</button>
+                            </form>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+
+            <div class="privComplaints complaintsCard">
+                <h1>Private Sector Employees complaint of your district</h1>
+                <% districtPRIVComplaints.forEach((districtPRIVComplaint)=>{ %>
+                    <div class="complaintCards">
+                        <div>
+                            <span>Name of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privname %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Email of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privemail %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Contact no of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privcontact %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>State of the victim's company: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privorgstate %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>District of the victim's company: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privorgdistrict %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Designation of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privdesignation %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Aadhar No of the victim: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privaadhar %>
+                            </span>
+                        </div>
+
+
+                        <h4 style="font-weight: bold; text-decoration: underline;">Organization details</h4>
+
+
+                        <div>
+                            <span>Name of organization: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privorgname %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Contact of organization: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privorgcontact %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Email of organization: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privorgemail %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Head of organization: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privorghead %>
+                            </span>
+                        </div>
+
+                        <h4 style="font-weight: bold; text-decoration: underline;">Accused details</h4>
+
+                        <div>
+                            <span>Name of accused: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privaccused %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Department of accused: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privdep %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Relation with accused: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privrel %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Victim complaint to ICC: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privicc %>
+                            </span>
+                        </div>
+                        <div>
+                            <span>Brief about the matter: </span>
+                            <span class="dataBold">
+                                <%= districtPRIVComplaint.privbrief %>
+                            </span>
+                        </div>
+                        <div>
+                            <form action="/usercomplaint/status" method="POST">
+                                <label for="selectstatus" style="font-weight: bold;">What is the application status:</label>
+                                <select name="selectstatus" id="selectstatus">
+                                    <option value="Complaint Lodged">Complaint Lodged</option>
+                                    <option value="Application accepted">Application accepted</option>
+                                    <option value="Application in process">Application in process</option>
+                                    <option value="Issue Solved">Issue solved</option>
+                                    <option value="Issue will not solved">Fake Issue</option>
+                                </select>
+                                <input type="hidden" name="complaintId" value="<%= districtPRIVComplaint._id %>">
+                                <input type="hidden" name="employee" value="priv">
+                                <input type="hidden" name="employeeEmail" value="<%= districtPRIVComplaint.privemail %>">
+                                <button type="submit">Click Status</button>
+                            </form>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+    </div>
+
+    <%- include("partials/mainFooter") -%>

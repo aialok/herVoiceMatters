@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chatbot with Choices</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Kanit:wght@200&family=Nunito&family=Oswald&family=Quicksand&family=Rajdhani&family=Source+Code+Pro:wght@200&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dongle', sans-serif;
+    font-size: 20px;
+}
+
+.disp
+{
+    display: none;
+}
+
+.disp1
+{
+    max-width: 50%;
+    border-radius: 10px 10px 10px 0px;
+    padding: 6px;
+    /* border: 1.7px solid  rgb(122, 228, 155); */
+    margin: 10px 0px;
+}
+.disp1 h4{
+    max-width: 100%;
+    background-color: rgb(122, 228, 155);
+    /* width: 200px; */
+    border-radius: 10px 10px 10px 0px;
+    padding: 4px;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.chat-container
+{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    /* border: 2px solid red; */
+    /* background-image: url("https://cdn.wallpapersafari.com/46/27/ZWbv3h.jpg");
+     */
+     box-shadow: inset;
+     background-color: rgb(197, 249, 232);
+    border-radius: 10px;
+    height: 600px;
+    width: 70%;
+    margin: 40px auto;
+    overflow: auto;
+}
+.user-input
+{
+    text-align: center;
+}
+.dispans
+{
+    display: none;
+}
+.a{
+    display: none;
+}
+.start-msg{
+    display: none;
+}
+
+.start-msg1
+{
+    max-width: 50%;
+    background-color: rgb(122, 228, 155);
+    width: 200px;
+    border-radius: 10px 10px 10px 0px;
+    padding: 6px;
+    margin: 10px 6px;
+}
+
+.usermsg-div
+{
+    
+    min-height: 35.2px; 
+    text-align: right;
+    margin-right: 6px;
+}
+
+.user
+{
+    padding-right: 6px;
+    display: inline-block;
+    max-width: 50%;
+    text-align: right;
+    background-color: rgb(122, 228, 155);
+    width: 125px;
+   border-radius: 10px 0px 10px 10px;
+}
+
+.a1{
+    max-width: 50%;
+    background-color: rgb(122, 203, 228);
+    /* width: 200px; */
+    border-radius: 10px 10px 10px 0px;
+    padding: 4px;
+    margin: 10px 6px;
+    font-weight: 700;
+}
+.user-input
+{
+    position: relative;
+    bottom: 70px;
+}
+.user-input-text
+{
+  background-color: rgb(242, 248, 248);
+  height: 30px;
+  width: 439px;
+    outline: none;
+    position: relative;
+    left: 1px;
+    border-width: 0;
+    border-bottom-left-radius: 10px;
+}
+.user-input-btn
+{
+    height: 30px;
+    width: 60px;
+    border-width: 0;
+    background-color: aquamarine;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="chat-container">
+   
+        <h3 class="start-msg start-msg1 ">Hello, how can i help you</h3>
+
+        <div class="disp disp1">
+            <h4 class="1">1.What is Sexual Harassment at workplace ?</h4>
+            <h4 class="2">2.How many kinds of sexual harassment at workplace are there?</h4>
+            <h4 class="3">3.Who can complain about of sexual harassment at workplace?</h4>
+            <h4 class="4">4.If I am a victim of sexual harassment, what should I do?</h4>
+            <h4 class="5">5.What kind of punishment could be awarded under the Act?</h4>
+            <h4 class="6">6.Can I register both FIR and lodge complaint with Complaints Committee at the same time?</h4>
+        </div>
+
+        <div class="dispans">
+            <p class="a a1">Ans 1.Sexual harassment at the workplace refers to unwelcome behavior of a sexual nature that
+                creates a hostile or intimidating work environment, interferes with an individual's ability to perform
+                their job, or results in adverse employment decisions, such as hiring, firing, promotions, or pay
+                raises.</p>
+            <p class="a a1">Ans 2.Quid pro quo harassment: This type of sexual harassment occurs when an individual in a
+                position of power, such as a supervisor, manager, or employer, demands sexual favors in exchange for
+                employment benefits, such as promotions, pay raises, job security, or favorable treatment Hostile work
+                environment harassment: This type of sexual harassment occurs when unwelcome behavior of a sexual nature
+                creates a hostile, intimidating, or offensive work environment that interferes with an individual's
+                ability to perform their job</p>
+            <p class="a a1">Ans 3.Here, student means a woman above 18 years of age. Those who are under 18 years of age can
+                lodge an FIR under the Protection of Children from Sexual Offences Act, 2012.</p>
+            <p class="a a1">Ans 4.If you feel comfortable in approaching the harasser yourself, you could directly tell the
+                perpetrator that you find his behaviour unwelcome or inappropriate and ask him not to repeat. Or
+
+                You can approach the Internal Complaints Committee established within your organization under Sexual
+                Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act (the SH Act), 2013 with a
+                written complaint. Or
+
+                In case, your organisation does not have ICC or if you want to make a complaint against the employer
+                himself or if you work in the capacity of domestic help, then you can lodge your complaint with Local
+                Complaints Committee established in your respective district under the SH Act. Or,
+
+                You can contact the nearest police station to lodge an FIR against the perpetrator</p>
+            <p class="a a1">Ans 5.As prescribed under the Service Rules In case service rules do not exist
+                Disciplinary action including written apology, reprimand, warning, censure withholding of promotion/ pay
+                raise/ increment Termination of employment Undergo counselling Community service
+                Deduction from salary for:
+                Mental Trauma, pain, suffering and emotional distress caused Medical expenses incurred The loss of
+                career opportunity The income and financial status of respondent
+                If the amount is not paid it can be recovered as arrear of land revenue</p>
+        </div>
+        <p class="a a1">Ans 6.Yes, a woman if she chooses to do so may both file the FIR with the police and complaint with
+            Complaints Committee simultaneously.</p>
+
+        <div class="usermsg-div">
+            <h2 class="user">WEEEE</h2>
+        </div>
+
+
+    </div>
+
+
+    <div class="user-input">
+        <input type="text" id="user-input" class="user-input-text" placeholder="Type your message..." />
+        <button class="user-input-btn">Send</button>
+    </div>
+
+    <div class="secdiv">
+
+    </div>
+  
+    <script>
+
+        
+let maincont = document.body.querySelector(".chat-container");
+let dispdiv = document.body.querySelector(".disp");
+let submit = document.body.querySelector(".user-input-btn");
+let startmsg = document.body.querySelector(".start-msg");
+let input = document.body.querySelector(".user-input-text");
+let usermsg = document.body.querySelector(".user");
+let usermsgdiv = document.body.querySelector(".usermsg-div");
+let secdiv = document.body.querySelector(".secdiv");
+usermsgdiv.style.display = "none";
+setTimeout(()=>
+{
+    startmsg.classList.remove("start-msg");
+    maincont.append(startmsg); 
+},2000);
+
+submit.addEventListener('click',()=>
+{
+    
+
+      usermsg.innerHTML=input.value;
+    //   usermsg.style.width=input.value.length*25;
+      usermsgdiv.style.display = "block";
+        maincont.append(usermsgdiv);
+   
+        
+        dispdiv.classList.remove("disp");
+        maincont.append(dispdiv);
+
+});
+let que = document.body.getElementsByTagName("h4");
+que = Array.from(que);
+
+let ans = document.body.getElementsByTagName("p");
+ans = Array.from(ans);
+
+let ansdiv = document.body.querySelector(".dispans");
+
+
+
+
+que.forEach((item) => {
+    item.addEventListener('click', (e)=>
+         {
+       
+            let k = e.target.getAttribute("class");
+            ansdiv.classList.remove("dispans");
+            ans[k-1].classList.remove("a");
+            maincont.append(ans[k-1]);
+            setTimeout(()=>
+            {
+                secdiv.innerHTML=dispdiv.outerHTML;
+                maincont.append(secdiv); 
+
+            },1000);
+    });
+       
+        // console.log(ans[k-1].getAttribute("class"));
+    });
+
+    
+    </script>
+
+
+    <!-- <script src="chatbot.js"></script> -->
+</body>
+
+</html>

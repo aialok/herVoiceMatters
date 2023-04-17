@@ -1,0 +1,71 @@
+<%- include("partials/mainHeader") -%>
+    <div class="userMainDiv">
+        <div class="userDataDiv">
+            <div>
+                <span>Name: </span>
+                <span class="dataBold"><%= fullName %></span>
+            </div>
+            <div>
+                <span>Email: </span>
+                <span class="dataBold"><%= useremail %></span>
+            </div>
+            <div>
+                <span>Your favourite pet: </span>
+                <span class="dataBold"><%= favouritepet %></span>
+            </div>
+        </div>
+        <div class="complaint-status-details">
+            <div class="complaint-status">
+                <h4 style="font-weight: bold;">Your complaint-status</h4>
+                <div>
+                    <span>Complaint ID: </span>
+                    <span class="dataBold"><%= complaintid %></span>
+                </div>
+                <div>
+                    <span>Complaint status: </span>
+                    <span class="dataBold"><%= complaintstatus %></span>
+                </div>
+            </div>
+            <div class="complaint-details">
+                <h4 style="font-weight: bold;">Your complaint-details</h4>
+                <p style="color: blue;">If the fields are empty, it means you doesnot fill the complaint form</p>
+                    <div>
+                        <span class="dataBold">Your aadhar : </span>
+                        <span><%= Aadhar %></span>
+                    </div>
+                    <div>
+                        <span class="dataBold">Your designation in the workplace : </span>
+                        <span><%= Designation %></span>
+                    </div>
+                    <div>
+                        <span class="dataBold">Accused name : </span>
+                        <span><%= Accused %></span>
+                    </div>
+                    <div>
+                        <span class="dataBold">Accused department : </span>
+                        <span><%= Department %></span>
+                    </div>
+                    <div>
+                        <span class="dataBold">Accused relation with you : </span>
+                        <span><%= Relation %></span>
+                    </div>
+                    <div>
+                        <span class="dataBold">Have you complaint to ICC : </span>
+                        <span><%= ICC %></span>
+                    </div>
+                    <div>
+                        <span class="dataBold">Your complaint in brief : </span>
+                        <span><%= Complaintbrief %></span>
+                    </div>
+                    <div>
+                        <span class="dataBold">Your State/(work state) : </span>
+                        <span><%= State %></span>
+                    </div>
+                    <div>
+                        <span class="dataBold">Your District/(work distric) : </span>
+                        <span><%= District %></span>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <%- include("partials/mainFooter") -%>
