@@ -1,5 +1,5 @@
 # herVoiceMatters
-  -[check out the site here](https://hervoicematters-production.up.railway.app/);
+- [check out the site here](https://hervoicematters-production.up.railway.app/);
 # A State Web Portal for Women Sexual Harassment at Workplace
 
 By creating a web portal where women lodge their complaints, track
