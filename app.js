@@ -527,10 +527,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
     console.log("Server started on port 3000");
 });
-
-// const newSuperAdmin = new SuperAdminData({
-//     secretKey: md5("JH012345"),
-//     uniqueAuthenticationID: md5("AF12N3K4N5"),
-//     superAdminEmail: "luckykhateeb4@gmail.com",
-//     superAdminContact: 9905522972
-// })
