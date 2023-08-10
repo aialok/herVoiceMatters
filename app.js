@@ -7,7 +7,13 @@ const _ = require('lodash');
 const mongoose = require("mongoose");
 const md5 = require('md5');
 const nodemailer = require('nodemailer');
-mongoose.connect("mongodb+srv://aialok:aialok1560@myblog.uqeudks.mongodb.net/?retryWrites=true&w=majority")
+require('dotenv').config();
+
+
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
 
 .then((data)=>{
     console.log("Database connected succssfully");
