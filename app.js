@@ -7,7 +7,16 @@ const _ = require('lodash');
 const mongoose = require("mongoose");
 const md5 = require('md5');
 const nodemailer = require('nodemailer');
-mongoose.connect("mongodb+srv://thematrix:DCSgvBAZIgfDYL8w@cluster0.ku1kg6o.mongodb.net/herVoiceMattersDB");
+mongoose.connect("mongodb+srv://aialok:aialok1560@myblog.uqeudks.mongodb.net/?retryWrites=true&w=majority")
+
+.then((data)=>{
+    console.log("Database connected succssfully");
+})
+
+.catch((err)=>{
+    console.log(err);
+});
+
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -102,12 +111,7 @@ const SgovComplaint = new mongoose.model("SgovComplaint", sgovcomplaintSchema);
 const PrivComplaint = new mongoose.model("PrivComplaint", privcomplaintSchema);
 const ComplaintStatus = new mongoose.model("ComplaintStatus", complaintStatusSchema);
 
-// const newSuperAdmin = new SuperAdminData({
-//     secretKey: md5("JH012345"),
-//     uniqueAuthenticationID: md5("AF12N3K4N5"),
-//     superAdminEmail: "luckykhateeb4@gmail.com",
-//     superAdminContact: 9905522972
-// })
+
 
 app.get("/", (req, res) => {
     res.render("home");
@@ -146,9 +150,18 @@ app.get("/userLogin", (req, res) => {
 
 app.post("/userLogin", async (req, res) => {
     const previousUser = await UserData.findOne({ userEmail: req.body.useremail });
-    const complaintStatusObj = await ComplaintStatus.findOne({ complaintuserEmail: previousUser.userEmail })
-    const complaintStatus = complaintStatusObj.complaintstatus;
-    const complaintIDStr = complaintStatusObj.complaintID;
+    const complaintStatusObj = await ComplaintStatus.findOne({ complaintuserEmail: previousUser.userEmail });
+    const complaintStatus=null;
+    const complaintIDStr=null;
+    if (complaintStatusObj) {
+        complaintStatus = complaintStatusObj.complaintstatus;
+        complaintIDStr = complaintStatusObj.complaintID;
+
+    } else {
+       console.log("Return NULL");
+    }
+    // const complaintStatus = complaintStatusObj.complaintstatus;
+    // const complaintIDStr = complaintStatusObj.complaintID;
     console.log(complaintStatusObj);
     if (previousUser == null) {
         res.render("signupUser", {
@@ -481,6 +494,8 @@ app.get("/sgovcomplaint", (req, res) => {
 app.get("/privcomplaint", (req, res) => {
     res.render("complaintPages/privcomplaint");
 })
+
+
 
 app.post("/usercomplaint/status", async (req, res) => {
     const newComplaintStatus = new ComplaintStatus({
